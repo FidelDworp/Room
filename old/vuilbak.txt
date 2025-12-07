@@ -1,1 +1,4 @@
+Dit is een vuilbakje voor bestanden die je niet meer nodig hebt!
+Rename een bestand (voorbeeld.ino) gewoon naar een nieuwe naam: "old/voorbeeld.ino" en hop:
+Het bestand zit nu in de map!
 
