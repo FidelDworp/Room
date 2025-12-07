@@ -1,5 +1,5 @@
 // ROOM_Generic.ino = Generic ROOM sketch - Installed on all roomcontrollers at Filip's new home + in the common WebIDE account with MakerKen.
-
+// 
 // 27sep21: Solved issue of device_name not being caught: see https://community.particle.io/t/surprising-issue-after-flashing-new-sketch-to-my-10-roomcontrollers/61194/5
 // 26sep21: Removed unnecessary parameters ",60,PRIVATE" from all messages and removed library "PublishQueueAsyncRK.cpp", using only standard publish messages.
 // 24sep21: Reduced publish frequency with factor 10
