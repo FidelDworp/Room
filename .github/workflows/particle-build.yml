@@ -16,6 +16,11 @@ jobs:
     - name: Install Particle CLI
       run: npm install -g particle-cli
 
+    - name: Login to Particle Cloud
+      env:
+        PARTICLE_TOKEN: ${{ secrets.PARTICLE_TOKEN }}
+      run: particle login --token $PARTICLE_TOKEN
+
     - name: Compile firmware
       env:
         PARTICLE_TOKEN: ${{ secrets.PARTICLE_TOKEN }}
