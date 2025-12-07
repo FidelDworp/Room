@@ -1,0 +1,35 @@
+name: Particle Firmware Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Particle CLI
+      run: |
+        npm install -g particle-cli
+
+    - name: List directory (debug)
+      run: ls -R
+
+    # Compile voor Photon – pas aan indien je Argon/Boron gebruikt
+    - name: Compile firmware
+      env:
+        PARTICLE_TOKEN: ${{ secrets.PARTICLE_TOKEN }}
+      run: |
+        particle compile photon . --saveTo firmware.bin
+
+    - name: Upload compiled firmware
+      uses: actions/upload-artifact@v4
+      with:
+        name: firmware
+        path: firmware.bin
