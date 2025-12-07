@@ -1,4 +1,4 @@
-// -S-Outside.ino = Operating a "Sunlight sensor", connected to the I2C connector of a PhotoniX shield.
+// S-Outside.ino = Operating a "Sunlight sensor", connected to the I2C connector of a PhotoniX shield.
 // Purpose: The TSL2561 is ideal as "solar" sensor to determine for all rooms if it is day or night. The lighting system response is based on that. Any Room controller could play this role.
 //
 // Attention: In direct sunlight (> 40000 lux), the sensor fails! (We substitute the result by "40000")
