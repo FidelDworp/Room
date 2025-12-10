@@ -5,7 +5,7 @@
 // Note: If you leave the TSL2561 ADDR connection 'floating', the default addr = 0x39.
 //
 // Revisions:
-//- 5dec25: Change reset threshold in the morning + include real lux in broadcast string
+//- 10dec25: Change reset threshold in the morning + include real lux in broadcast string
 //- 26nov25: Correction in revised sketch!
 //- 25nov25: Added automatic reset function to AUTO mode in the morning and evening. (Grok)
 //- 3nov25: Removed Homebridge commands, Removed delay commands after publish commands, Stuur manueel "3000 LUX" bij daymode "PRETEND IT'S DAY!" => ECO solar werkt dan wel!
@@ -39,8 +39,8 @@ int daymode = 2;// Daymode variable: Set remotely to simulate Day (1), Night(0) 
 
 // Automatic reset to AUTO in the morning and evening:
 bool isCurrentlyDark = true;                         // start in "nacht"-state
-const double ENTER_DAY_THRESHOLD   = 15.0;          // zonsopgang-reset bij ≥ 180 lux (vroeg genoeg, maar geen reset op superdonkere dagen)
-const double ENTER_NIGHT_THRESHOLD = 5.0;           // zonsondergang-reset bij ≤ 80 lux (voorkomt reset bij schemer alleen) =>  (moet lager zijn dan bovenstaande!)
+const double ENTER_DAY_THRESHOLD   = 10.0;          // zonsopgang-reset bij ≥ 10 lux (vroeg genoeg, maar geen reset op superdonkere dagen)
+const double ENTER_NIGHT_THRESHOLD = 5.0;           // zonsondergang-reset bij ≤ 5 lux (voorkomt reset bij schemer alleen) =>  (moet lager zijn dan bovenstaande!)
 
 
 
