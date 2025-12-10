@@ -1,4 +1,4 @@
-# Room
+# Photon Rooms
 Particle Photon based home-automation system: Lighting, Heating, Ventilation, Access control. 
 For each Room there is a control sketch for the iTroniX PhotoniX shield with peripherals (Roomsense, Options, Extended peripherals...
 
